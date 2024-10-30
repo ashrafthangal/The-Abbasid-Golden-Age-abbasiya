@@ -2,6 +2,47 @@
 <html lang="en">
 <head>
 <style>
+  <main>
+        <section>
+            <h2>Welcome to the Abbasid Golden Age Website</h2>
+            <p>Explore the history, achievements, key figures, and the eventual decline of the Abbasid Caliphate.</p>
+        </section>
+
+        <!-- Share Buttons Section -->
+        <div class="share-container">
+            <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
+            <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
+            <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="share-button linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript Functions for Sharing
+        const currentURL = window.location.href;
+
+        function shareOnFacebook() {
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const text = "Explore the Abbasid Golden Age!";
+            const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
  /* Global Styles */
 * {
     margin: 0;
@@ -253,6 +294,48 @@ img {
     </table></li>
             
         </ul>
+
+      <main>
+        <section>
+            <h2>Welcome to the Abbasid Golden Age Website</h2>
+            <p>Explore the history, achievements, key figures, and the eventual decline of the Abbasid Caliphate.</p>
+        </section>
+
+        <!-- Share Buttons Section -->
+        <div class="share-container">
+            <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
+            <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
+            <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
+            <button class="share-button linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript Functions for Sharing
+        const currentURL = window.location.href;
+
+        function shareOnFacebook() {
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const text = "Explore the Abbasid Golden Age!";
+            const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const url = `https://api.whatsapp.com/send?text=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentURL)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
     </section>
 
     <footer>
