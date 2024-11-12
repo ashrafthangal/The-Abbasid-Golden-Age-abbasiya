@@ -5,27 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baghdad & Abbasid Caliphate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <style>
       /* Container styling for share buttons */
-        .share-buttons {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            align-items: center;
-            justify-content: center;
-        }
+       .share-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-        .share-buttons a {
-            color: white;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.share-buttons a {
+    text-decoration: none;
+    color: #fff; /* Change the color to fit your theme */
+    background-color: #007bff; /* Button color */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.share-buttons a:hover {
+    background-color: #0056b3; /* Darker on hover */
+}
+
+.share-buttons i {
+    font-size: 20px; /* Size of icons */
+}
+
 
         /* Individual platform colors */
         .facebook { background-color: #3b5998; }
@@ -429,12 +435,14 @@ img {
         </section>
 
         <!-- Share Buttons Section -->
-     <div class="share-buttons">
-        <h3>Share This Page:</h3>
-        <a href="#" class="facebook" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="whatsapp" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" class="linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+  <div class="share-buttons">
+    <h3>Share This Page:</h3>
+    <a href="#" onclick="shareOnFacebook()" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" onclick="shareOnTwitter()" title="Share on Twitter"><i class="fab fa-x-twitter"></i></a>
+    <a href="#" onclick="shareOnWhatsApp()" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" onclick="shareOnLinkedIn()" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+</div>
+
   <div class="toggle-container" onclick="toggleDarkMode()">
         <div class="toggle-switch">
             <div class="toggle-circle"></div>
