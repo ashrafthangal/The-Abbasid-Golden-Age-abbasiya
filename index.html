@@ -438,7 +438,7 @@ img {
   <div class="share-buttons">
     <h3>Share This Page:</h3>
     <a href="#" onclick="shareOnFacebook()" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" onclick="shareOnTwitter()" title="Share on Twitter"><i class="fab fa-x-twitter"></i></a>
+
     <a href="#" onclick="shareOnWhatsApp()" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
     <a href="#" onclick="shareOnLinkedIn()" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
 </div>
@@ -519,10 +519,7 @@ img {
             window.open(url, '_blank');
         }
 
-        function shareOnTwitter() {
-            const text = "Explore the Abbasid Golden Age!";
-            const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentURL)}&text=${encodeURIComponent(text)}`;
-            window.open(url, '_blank');
+      
         }
 
         function shareOnWhatsApp() {
