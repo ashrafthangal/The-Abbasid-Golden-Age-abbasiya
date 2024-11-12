@@ -6,35 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baghdad & Abbasid Caliphate</title>
 <style>
-      /* CSS for Share Buttons */
-        .share-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .share-button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
+   
+        /* Button Style */
+        .button {
+            display: inline-block;
+            background-color: #005c97;
             color: white;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            margin: 5px;
         }
 
-        .facebook { background-color: #3b5998; }
-        .facebook:hover { background-color: #334d84; }
+        .button:hover {
+            background-color: #0077b6;
+        }
 
-        .twitter { background-color: #1da1f2; }
-        .twitter:hover { background-color: #1991da; }
+        /* Share Buttons */
+        .share-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-        .whatsapp { background-color: #25d366; }
-        .whatsapp:hover { background-color: #1eba5a; }
+        .share-buttons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
 
-        .linkedin { background-color: #0077b5; }
-        .linkedin:hover { background-color: #005f8c; }
+        .share-buttons a:hover {
+            color: #005c97;
+        }
+  
  /* Global Styles */
 * {
     margin: 0;
@@ -219,22 +226,9 @@ img {
     margin-top: 20px;
 }
 
-/* Button Style */
-.button {
-    display: inline-block;
-    background-color: #005c97;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
 
-.button:hover {
-    background-color: #0077b6;
-}
+
+
 
 </style>
 </head>
@@ -306,11 +300,12 @@ img {
         </section>
 
         <!-- Share Buttons Section -->
-        <div class="share-container">
-            <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
-            <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
-            <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
-            <button class="share-button linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
+          <div class="share-buttons">
+            <h4>Share this page:</h4>
+            <a href="https://wa.me/?text=Check out this page on Baghdad & The Abbasid Caliphate! [insert URL]" target="_blank" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=Check out this page on Baghdad & The Abbasid Caliphate! [insert URL]" target="_blank" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=[insert URL]&title=Baghdad & The Abbasid Caliphate" target="_blank" title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=[insert URL]" target="_blank" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
         </div>
     </main>
 
