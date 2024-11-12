@@ -6,36 +6,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baghdad & Abbasid Caliphate</title>
 <style>
-       /* CSS for Share Buttons */
-        .share-container {
+      /* Container styling for share buttons */
+        .share-buttons {
             display: flex;
-            justify-content: center;
-            gap: 15px;
+            gap: 10px;
             margin-top: 20px;
+            align-items: center;
+            justify-content: center;
         }
 
-        .share-button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
+        .share-buttons a {
             color: white;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Individual platform colors */
         .facebook { background-color: #3b5998; }
-        .facebook:hover { background-color: #334d84; }
+        
+        .whatsapp { background-color: #25D366; }
+        .linkedin { background-color: #0077B5; }
+        .facebook:hover { background-color: #2d4373; }
+       
+        .whatsapp:hover { background-color: #1ebe60; }
+        .linkedin:hover { background-color: #005582; }
 
-        .twitter { background-color: #1da1f2; }
-        .twitter:hover { background-color: #1991da; }
+        /* Icon styling */
+        .share-buttons i {
+            font-size: 22px;
+        }
 
-        .whatsapp { background-color: #25d366; }
-        .whatsapp:hover { background-color: #1eba5a; }
+        /* Hover effects */
+        .share-buttons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-        .linkedin { background-color: #0077b5; }
-        .linkedin:hover { background-color: #005f8c; }
+
+
+
+ /* CSS for Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* CSS for FAQ Section */
+        .faq-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .faq-section h3 {
+            text-align: center;
+        }
+
+        .faq {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .faq:hover {
+            background-color: #f1f1f1;
+        }
+
+        .faq p {
+            display: none; /* Hide answers initially */
+        }
+
+        /* CSS for Testimonial Section */
+        .testimonial-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .testimonial {
+            border-left: 5px solid #333;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        .testimonial p.author {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* CSS for Resources Section */
+        .resources-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .resources-section h3 {
+            text-align: center;
+        }
+
+        .resources-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resources-section li {
+            margin: 10px 0;
+        }
+
+        .resources-section a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .resources-section a:hover {
+            text-decoration: underline;
+        }
  /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+      /* CSS for Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode .modal-content {
+            background-color: #222;
+        }
+
+        body.dark-mode .contact-form,
+        body.dark-mode .faq-section,
+        body.dark-mode .testimonial-section,
+        body.dark-mode .resources-section {
+            background-color: #333;
+            color: #fff;
+        }
+
+   /* Basic page st*/
 * {
     margin: 0;
     padding: 0;
@@ -136,7 +300,55 @@ img {
     border-radius: 8px;
     margin-top: 20px;
 }
+/* CSS for Back-to-Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
 
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 /* Button Style */
 .button {
     display: inline-block;
@@ -214,14 +426,79 @@ img {
         <section>
             <h2>Welcome to the Abbasid Golden Age Website</h2>
             <p>Explore the history, achievements, key figures, and the eventual decline of the Abbasid Caliphate.</p>
-        
+        </section>
 
         <!-- Share Buttons Section -->
-        <div class="share-container">
-            <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
-            <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
-            <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
-            <button class="share-button linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
+     <div class="share-buttons">
+        <h3>Share This Page:</h3>
+        <a href="#" class="facebook" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="whatsapp" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  <div class="toggle-container" onclick="toggleDarkMode()">
+        <div class="toggle-switch">
+            <div class="toggle-circle"></div>
+        </div>
+        <span id="mode-text">Light Mode</span>
+    </div>
+<button class="back-to-top" id="backToTopBtn" onclick="scrollToTop()">Back to Top</button>
+
+        <!-- The Modal -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h3>More Information</h3>
+                <p>Here you can add more detailed information about the Abbasid Golden Age.</p>
+            </div>
+        </div>
+                 <!-- Contact Form Section -->
+        <div class="contact-form">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq" onclick="toggleFAQ(this)">
+                <h4>What is the Abbasid Golden Age?</h4>
+                <p>The Abbasid Golden Age refers to a period of cultural, economic, and scientific flourishing in the history of the Abbasid Caliphate, roughly between the 8th and 13th centuries.</p>
+            </div>
+            <div class="faq" onclick="toggleFAQ(this)">
+                <h4>What were the major achievements of the Abbasid Caliphate?</h4>
+                <p>Major achievements include advancements in mathematics, medicine, and the arts, as well as the establishment of Baghdad as a center of learning.</p>
+            </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="testimonial-section">
+            <h3>What People Are Saying</h3>
+            <div class="testimonial">
+                <p>"The Abbasid era was a beacon of knowledge and innovation that shaped the future of science and philosophy." <span class="author">- Scholar A</span></p>
+            </div>
+            <div class="testimonial">
+                <p>"Baghdad was the heart of the Islamic world, where cultures met and ideas flourished." <span class="author">- Historian B</span></p>
+            </div>
+            <div class="testimonial">
+                <p>"The advancements in mathematics during the Abbasid Golden Age laid the groundwork for modern science." <span class="author">- Scientist C</span></p>
+            </div>
+        </div>
+
+        <!-- Resources Section -->
+        <div class="resources-section">
+            <h3>Resources for Further Reading</h3>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Abbasid" target="_blank">Wikipedia - Abbasid Caliphate</a></li>
+                <li><a href="https://www.britannica.com/topic/Abbasid" target="_blank">Britannica - Abbasid</a></li>
+                <li><a href="https://www.history.com/topics/religion/abbasid-caliphate" target="_blank">History.com - Abbasid Caliphate</a></li>
+                <li><a href="https://www.aljazeera.com/news/2021/9/14/the-abbasid-caliphate-an-unstoppable-force-in-the-middle-ages" target="_blank">Al Jazeera - The Abbasid Caliphate</a></li>
+                <li><a href="https://www.goodreads.com/book/show/12345678-abbasid-caliphate" target="_blank">Goodreads - Abbasid Caliphate Book</a></li>
+            </ul>
         </div>
     </main>
 
@@ -249,7 +526,114 @@ img {
             const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentURL)}`;
             window.open(url, '_blank');
         }
+ // Back to Top Button Functionality
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Modal Functionality
+        const moreInfoBtn = document.getElementById("moreInfoBtn");
+        const modal = document.getElementById("infoModal");
+        const closeModal = document.getElementById("closeModal");
+
+        moreInfoBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+  // Modal Functionality
+        const moreInfoBtn = document.getElementById("moreInfoBtn");
+        const modal = document.getElementById("infoModal");
+        const closeModal = document.getElementById("closeModal");
+
+        moreInfoBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Contact Form Submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your message has been sent!");
+            this.reset();
+        });
+
+        // FAQ Toggle Functionality
+        function toggleFAQ(faqElement) {
+            const answer = faqElement.querySelector("p");
+            answer.style.display = answer.style.display === "none" ? "block" : "none";
+        }
+
+        // Image Carousel Functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel img');
+        showSlides();
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].classList.add('active');
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            updateSlides();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            updateSlides();
+        }
+
+        function updateSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+            }
+            slides[slideIndex - 1].classList.add('active');
+        }
+
+ function toggleDarkMode() {
+          const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            this.innerText = document.body.classL
     </script>
+
 
 
     </section>
