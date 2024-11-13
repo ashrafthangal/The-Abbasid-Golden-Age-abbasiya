@@ -1,36 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-   /* CSS for Share Buttons */
-        .share-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
+   .share-buttons {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
 
-        .share-button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
 
+.share-btn.facebook { background-color: #3b5998; }
+.share-btn.linkedin { background-color: #0077b5; }
+.share-btn.reddit { background-color: #ff4500; }
+.share-btn.x { background-color: #1DA1F2; } /* X platform button */
+.share-btn.whatsapp { background-color: #25D366; }
+
+.share-btn:hover {
+    opacity: 0.8;
+}
+
+
+        /* Individual platform colors */
         .facebook { background-color: #3b5998; }
-        .facebook:hover { background-color: #334d84; }
+        
+        .whatsapp { background-color: #25D366; }
+        .linkedin { background-color: #0077B5; }
+        .facebook:hover { background-color: #2d4373; }
+       
+        .whatsapp:hover { background-color: #1ebe60; }
+        .linkedin:hover { background-color: #005582; }
 
-        .twitter { background-color: #1da1f2; }
-        .twitter:hover { background-color: #1991da; }
+        /* Icon styling */
+        .share-buttons i {
+            font-size: 22px;
+        }
 
-        .whatsapp { background-color: #25d366; }
-        .whatsapp:hover { background-color: #1eba5a; }
+        /* Hover effects */
+        .share-buttons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-        .linkedin { background-color: #0077b5; }
-        .linkedin:hover { background-color: #005f8c; }
+
  /* Global Styles */
 * {
     margin: 0;
@@ -132,21 +164,7 @@ img {
     margin-top: 20px;
 }
 
-/* Button Style */
-.button {
-    display: inline-block;
-    background-color: #005c97;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
 
-.button:hover {
-    background-color: #0077b6;
 }
 
 </style>
@@ -187,18 +205,26 @@ img {
     
      <img src="https://th.bing.com/th/id/OIP.uJMzLvYaY38hG5cgPQOaOgHaDF?w=345&h=145&c=7&r=0&o=5&pid=1.7" alt="Mongol Invasion of Baghdad">
   <main>
-        <section>
-            <h2>Welcome to the Abbasid Golden Age Website</h2>
-            <p>Explore the history, achievements, key figures, and the eventual decline of the Abbasid Caliphate.</p>
-        </section>
+        
 
         <!-- Share Buttons Section -->
-        <div class="share-container">
-            <button class="share-button facebook" onclick="shareOnFacebook()">Facebook</button>
-            <button class="share-button twitter" onclick="shareOnTwitter()">Twitter</button>
-            <button class="share-button whatsapp" onclick="shareOnWhatsApp()">WhatsApp</button>
-            <button class="share-button linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
-        </div>
+       <div class="share-buttons">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank" class="share-btn facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=YOUR_URL" target="_blank" class="share-btn linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.reddit.com/submit?url=YOUR_URL" target="_blank" class="share-btn reddit">
+            <i class="fab fa-reddit-alien"></i>
+        </a>
+        <a href="https://www.x.com/intent/tweet?url=YOUR_URL" target="_blank" class="share-btn x">
+            <i class="fab fa-x"></i> <!-- This uses the custom Font Awesome X icon -->
+        </a>
+        <a href="https://wa.me/?text=YOUR_URL" target="_blank" class="share-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
     </main>
 
     <script>
